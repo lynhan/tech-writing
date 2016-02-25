@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +14,25 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="animate.min.css">
 
     <style>
     body {
         margin: 0 auto;
         text-align: center;
         margin-top: 5vw;
+        margin-bottom: 5vw;
+        width: 70vw;
+        font-size:18px;
+    }
+    .text {
+        margin-top: 20px;
+    }
+    /*d3*/
+
+    svg {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .bar {
         fill: white;
@@ -46,14 +60,21 @@
 
 <body>
 
-    <div class="title">
+    <div class="one text">
         focus.
-        Texting slows reaction time by 0.23 seconds
     </div>
 
-    <div class="subtitle">
-        which pushes your car this much further into oncoming traffic
+    <div class="two text">
+        texting slows reaction time by 0.23 seconds
+    </div>
 
+    <div class="three text">
+        which pushes your car further into oncoming traffic.
+    </div>
+
+    <div class="four text">
+        this graph shows how much further you move (in feet) </br>
+        based on how fast your car travels (in miles per hour).
     </div>
 
     <script type="text/javascript" src="d3/d3.v3.js"></script>
@@ -61,16 +82,15 @@
     <script type="text/javascript" src="d3/bar.js"></script>
     <!-- <script type="text/javascript" src="d3/force.js"></script> -->
 
-    <div class="text">
+    <div class="five text">
         If you text, you are 23.2 times more likely than a focused driver to get into a car accident.
     </div>
 
-    <div class="text">
-        Drivers who text endanger more people because resultant accidents can happen all day,
-        whereas drunk driving accidents are mostly at night.
+    <div class="six text">
+        Accidents from texting and driving endanger more people since they happen at day and night.
     </div>
 
-    <div class="text">
+    <div class="seven text">
         Finish texts before driving.
         Do not reply to texts while driving.
         Pullover to text.
