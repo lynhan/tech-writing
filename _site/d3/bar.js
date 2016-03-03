@@ -4,8 +4,8 @@
 // globals! sorry functional programming
 
 var margin = {top: 20, right: 20, bottom: 40, left: 40},
-width = 300 - margin.left - margin.right,
-height = 200 - margin.top - margin.bottom;
+width = 500 - margin.left - margin.right,
+height = 400 - margin.top - margin.bottom;
 
 var dataset = [];
 var zero = [];
