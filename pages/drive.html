@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Illustration assignment</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <style>
+
+    .text {
+        font-size:20px;
+        margin: 0 auto;
+        margin-top: 20px;
+        max-width:470px;
+        text-align: left;
+    }
+    .focus-title {
+        font-weight: bold;
+        font-size:30px;
+    }
+    .five {
+        text-indent: 20px;
+    }
+
+    /*d3*/
+
+    svg {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .bar {
+        fill: white;
+        stroke-width: 1px;
+        stroke:black;
+    }
+    .axis {
+        font: 15px sans-serif;
+    }
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    .x.axis path {
+        display: none;
+    }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="focus-title text">
+        Focus.
+    </div>
+    <script type="text/javascript">
+    $('.focus-title').css('color', 'white');
+
+    setTimeout(function() {
+        $('.focus-title').css('color', 'black').addClass('animated fadeInUp');
+    }, 200);
+
+    </script>
+
+    <div class="text">
+        Texting while driving slows reaction time by 0.23 seconds, which pushes your car further into oncoming traffic.
+    </div>
+
+    <div class="text">
+        This graph shows how much further you move (in feet)
+        based on how fast your car travels (in miles per hour). Driving while texting makes you this much more vulnerable to car accidents.
+    </div>
+
+    <script type="text/javascript" src="../d3/d3.v3.js"></script>
+    <script type="text/javascript" src="../d3/bar.js"></script>
+
+    <div class="five text">
+        Car accidents can be fatal and drivers should focus completely on the road to prevent them from happening. However, the reality is that many people drive while distracted. Texting is one of these distractions; it takes your eyes off the road and impairs your reaction time. If you text, you are 23.2 times more likely than a focused driver to get into a car accident, as you travel much further into oncoming traffic (as shown by this graph). Accidents from texting and driving endanger more people since they happen at day and night. Avoid accidents caused by texting while driving by finishing texts before driving, ignoring new texts while driving, and pulling over to text.
+    </div>
+
+
+
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>
