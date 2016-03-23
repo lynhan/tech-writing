@@ -9,8 +9,43 @@ body {
 
 .title {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 600;
+}
+.drive-text {
+    font-size:20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width:470px;
+    text-align: left;
+}
+.text {
+    font-size:20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width:700px;
+    text-align: left;
+}
+g {
+    color:rgb(12, 151, 159);
+    font-weight:bold;
+}
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    border: 0px;
+    background:white;
+    color:rgb(12, 151, 159);
+    font-weight:bold;
+    font-size:15px;
+    padding:0;
+    margin: 20px 0 20px 0;
+}
+hr {
+    margin: 50px 0 50px 0;
 }
 
 .link {
@@ -18,7 +53,7 @@ body {
 }
 
 a:link, a:visited {
-    color: rgb(131, 131, 131);
+    color: rgb(144, 144, 144);
     text-decoration: none;
 }
 

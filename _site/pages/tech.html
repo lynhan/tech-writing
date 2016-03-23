@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+
+
+<body>
+
+    <div class="title">
+        a brief intro to git
+    </div>
+
+
+
+
+    <div class="text">
+        This tutorial assumes you are proficient with command line, have git installed, and are familiar with version control. We'll walk through some basic commands to get comfortable with git.
+    </div>
+
+    <div class="text">
+        We'll use a <g>test/</g> directory that contains two empty files: <g>one.txt</g> and <g>two.txt</g>.
+    </div>
+
+
+
+
+    <hr>
+
+    <div class="text">
+        <b>git init</b>
+        initializes a repository in your current directory.
+    </div>
+    <div class="text">
+        Run git init and you'll see <br>
+        <pre>Initialized empty Git repository in test/</pre>
+    </div>
+
+
+
+
+
+    <hr>
+
+
+    <div class="text">
+        <b>git status</b>
+        shows you the files that are staged for a commit.
+    </div>
+
+    <div class="text">
+        Run git status and you'll see<br>
+
+<pre>On branch master
+
+Initial commit
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+
+one.txt
+two.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+</pre>
+
+        We'll use git status frequently to examine our staging area.
+    </div>
+
+
+
+
+
+
+    <hr>
+
+
+    <div class="text">
+        <b>git add (file name)</b> stages that file.
+    </div>
+
+
+    <div class="text">
+        <b>git add .</b> stages all files.
+    </div>
+    <div class="text">
+        Run git add . and git status and you'll see one.txt and two.txt are in staging.<br>
+
+<pre>On branch master
+
+Initial commit
+
+Changes to be committed:
+(use "git rm --cached <file>..." to unstage)
+
+new file:   one.txt
+new file:   two.txt
+</pre>
+    </div>
+
+
+
+
+
+    <hr>
+    <div class="text">
+        If you want to unstage a file, use <b>git rm --cached (file name)</b>. <br>
+
+        Run <b>git rm --cached -r .</b> and you'll see
+<pre>
+rm 'one.txt'
+rm 'two.txt'
+</pre>
+    </div>
+
+
+    <hr>
+
+
+    <div class="text">
+        <b>git commit -m (message)</b>
+        creates a commit from staged files. Each commit has a unique hash based on your message, name, email, and commit time.<br><br>
+
+        If you removed your files from staging, add them to staging again. <br>
+
+        Run git commit -m 'add one.txt and two.txt' and you'll see <br>
+
+<pre>
+[master (root-commit) 70c5add] add one.txt and two.txt
+2 files changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 one.txt
+create mode 100644 two.txt
+</pre>
+
+
+    </div>
+
+
+
+    <div class="text">
+        Run git status and you'll see
+
+<pre>
+On branch master
+nothing to commit, working directory clean
+</pre>
+
+    </div>
+    <div class="text">
+        You made a commit and your staging area is clean.
+    </div>
+
+
+
+
+
+    <hr>
+    <div class="text">
+        <b>git log</b> shows your commit history. <br>
+        Run git log and you'll see something like<br>
+
+<pre>
+commit 70c5add089ce283769d9ce32766794dccf165d4e
+Author: lyn han <lynfhan@gmail.com>
+Date:   Wed Mar 23 15:52:57 2016 -0500
+
+    add one.txt and two.txt
+</pre>
+
+    Your commit hash will be different because your have different author and date. Add some text to one.txt and make another commit so that git log shows two commits.<br>
+
+<pre>
+commit 06390f1e539f60210026d03c7d3e7bdc592e36de
+Author: lyn han <lynfhan@gmail.com>
+Date:   Wed Mar 23 16:46:41 2016 -0500
+
+    add text to one.txt
+
+commit 70c5add089ce283769d9ce32766794dccf165d4e
+Author: lyn han <lynfhan@gmail.com>
+Date:   Wed Mar 23 15:52:57 2016 -0500
+
+    add one.txt and two.txt
+
+</pre>
+    </div>
+
+    <hr>
+    <div class="text">
+        <b>git checkout </b>
+        reverts your files back to what they looked a commit. Use <b>git checkout (commit hash) </b> for a single commit and <b>git checkout master </b> to go to the latest version.
+    </div>
+
+    <div class="text">
+        Run git checkout 06380f and you'll see
+
+<pre>
+Note: checking out '06390f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 06390f1... add text to one.txt
+</pre>
+
+    You have reverted your files to their states at the first commit. Look around and you'll see that the files are empty.
+    </div>
+
+    <div class="text">
+        To go back to the latest version, run git checkout master and you'll see
+<pre>
+Switched to branch 'master'
+</pre>
+
+    Look around again and you'll see that one.txt has the latest text.
+    </div>
+
+
+
+    <hr>
+
+    <div class="text">
+        Congratulations! You now know your way around basic git commands. Visit the <a href="https://git-scm.com/">documentation</a> to learn more about advance git commands and read this <a href="http://maryrosecook.com/blog/post/git-from-the-inside-out">guide</a> to learn about how git works under the hood.
+    </div>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>
