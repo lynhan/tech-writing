@@ -24,25 +24,163 @@
 <body>
 
     <div class="title">
-        record snapshots of files with git
+        version control with git
     </div>
 
 
-
-
-    <b>what is version control?</b>
-
     <div class="text">
-        Version control is the idea of tracking files at different points in time so you can look back at a snapshot when needed.
+        Version control is the idea of taking snapshots of files at different points in time so you can look back at a snapshot when needed. In this tutorial, we'll walk through how to
 
-        <br>
+        <div class="contents">
+            <a href="#access">access a folder via Terminal</a>
+            <a href="#make">set up the git repository</a>
+            <a href="#snap">commit snapshots of files</a>
+            <a href="#check">check out snapshots</a>
+        </div>
+
         This tutorial assumes you have a mac and have followed this <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">guide</a> on installing git.
     </div>
 
 
 
+</div>
 
-    <script src="http://localhost:35729/livereload.js"></script>
+
+
+<hr>
+
+
+<div class="text" id="#access">
+
+    <div class="subtitle">
+        access a folder via Terminal
+    </div>
+    Make a new folder on your Desktop named test with two empty text files.
+
+    <div class="imgbox">
+        <img src="../gifs/folder.png" alt="" />
+    </div>
+
+
+    <br>
+
+
+    Open a new Terminal window and drag the folder to the Terminal window. Press enter.
+
+    <div class="imgbox">
+        <img src="../gifs/drag.gif" alt="" />
+    </div>
+
+</div>
+
+
+
+
+<hr>
+
+
+<div class="text" id="#set">
+
+    <div class="subtitle">
+        set up the git repository
+    </div>
+    Make a git repository with <b>git init</b>.
+
+    <div class="imgbox">
+        <img src="../gifs/make.gif" alt="" />
+    </div>
+
+    <br>
+
+    Staging is the area where files are prepared for a snapshot, or a commit. Type <b>git status</b> to see information about files in staging.
+
+    <div class="imgbox">
+        <img src="../gifs/status.gif" alt="" />
+    </div>
+
+    git tells you that the files are untracked. This means you haven't added them to staging to prepare them for a commit. Let's add both files to staging.
+
+    <div class="imgbox">
+        <img src="../gifs/add.gif" alt="" />
+    </div>
+
+    If we run <b>git status</b>, we see that the files are now in staging.
+
+    <div class="imgbox">
+        <img src="../gifs/status2.gif" alt="" />
+    </div>
+
+</div>
+
+
+
+
+<hr>
+
+
+
+<div class="text" id="#snap">
+
+    <div class="subtitle">
+        take snapshots of files
+    </div>
+
+    Now we are ready to commit a snapshot of the files in staging. Each commit has a message describing the status of the snapshot. Since we only added the two files, let's call this commit "add one.txt and two.txt".
+
+    <div class="imgbox">
+        <img src="../gifs/commit.gif" alt="" />
+    </div>
+
+    Congratulations! You just took a snapshot of your files. Now let's make some changes. I'm going to open up one.txt and save "hi" to it.
+
+    <div class="imgbox">
+        <img src="../gifs/one.png" alt="" />
+    </div>
+
+    If we run <b>git status</b> again, we see that we modified one.txt. This change isn't in staging. If we try to commit a snapshot now, git won't let us because we haven't staged any changes. So let's add the change to one.txt to staging with <b>git add .</b> and commit the change.
+
+    <div class="imgbox">
+        <img src="../gifs/commit2.gif" alt="" />
+    </div>
+</div>
+
+
+
+<div class="text" id="#check">
+
+    <div class="subtitle">
+        check out snapshots
+    </div>
+
+    <b>git log</b> shows our commit history.
+
+    Press q to exit the history view and go back to command line;
+
+    <div class="imgbox">
+        <img src="../gifs/log.gif" alt="" />
+    </div>
+
+    We look around a past snapshot using <b>git checkout (snapshot hash)</b>, where the snapshot hash is the first 4 digits of the commit hash. We saw with <b>git log</b> that the hash of our first commit is 54beb5, so let's checkout that commit and look around.
+
+
+    <div class="imgbox">
+        <img src="../gifs/checkout.gif" alt="" />
+    </div>
+
+    Notice that now one.txt is empty, as it was originally when we made this commit!
+    Now lets go back to our latest version with <b>git checkout master</b>.
+
+    <div class="imgbox">
+        <img src="../gifs/checkout2.gif" alt="" />
+    </div>
+
+    Congratulations! You now know how to access a folder via Terminal and commit snapshots of your project with git. Visit the <a href="https://git-scm.com/">documentation</a> to learn more about advance git commands and read this <a href="http://maryrosecook.com/blog/post/git-from-the-inside-out">guide</a> to learn about how git works under the hood.
+
+</div>
+
+
+
+<script src="http://localhost:35729/livereload.js"></script>
 </body>
 
 </html>

@@ -12,6 +12,12 @@ body {
     margin-bottom: 30px;
     font-weight: 600;
 }
+.subtitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+}
 .drive-text {
     font-size:20px;
     margin: 0 auto;
@@ -25,6 +31,10 @@ body {
     margin-top: 20px;
     max-width:700px;
     text-align: left;
+}
+.contents {
+    text-align: center;
+    margin: 15px 0 15px 0;
 }
 g {
     color:rgb(12, 151, 159);
@@ -52,6 +62,9 @@ hr {
     margin-bottom: 10px;
 }
 
+.contents a {
+    display:block;
+}
 a:link, a:visited {
     color: rgb(144, 144, 144);
     text-decoration: none;
@@ -67,4 +80,15 @@ a:hover {
 a:active {
     color: rgb(4, 124, 117);
     text-decoration: none;
+}
+
+
+
+.imgbox {
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+img {
+    margin: 0 auto;
+    width: auto;
 }
